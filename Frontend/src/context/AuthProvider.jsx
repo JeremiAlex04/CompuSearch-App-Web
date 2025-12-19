@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { AuthContext } from "./AuthContext";
-import { LoginService } from "../features/auth/services/LoginService";
-import { RegisterService } from "../features/auth/services/RegisterService";
-import { ForgotService } from "../features/auth/services/ForgotService";
-import { ResetService } from "../features/auth/services/ResetService";
+import { LoginService } from "../features/auth/services/loginService";
+import { RegisterService } from "../features/auth/services/registerService";
+import { ForgotService } from "../features/auth/services/forgotService";
+import { ResetService } from "../features/auth/services/resetService";
 import { LogoutService } from "../features/auth/services/LogoutService";
 import { MeService } from "../features/auth/services/MeService";
 import { RefreshService } from "../features/auth/services/RefreshService";

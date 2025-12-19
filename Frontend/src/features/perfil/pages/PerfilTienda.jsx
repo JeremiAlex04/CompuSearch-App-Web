@@ -22,8 +22,6 @@ const PerfilTienda = () => {
         { eventKey: "dashboard", label: "Dashboard", icon: "bi bi-speedometer2" },
         { eventKey: "informacion", label: "Información", icon: "bi bi-info-circle-fill" },
         { eventKey: "productos", label: "Productos", icon: "bi bi-box-seam" },
-        { eventKey: "planes", label: "Planes", icon: "bi bi-card-list" },
-        { eventKey: "pagos", label: "Pagos", icon: "bi bi-credit-card-fill" },
         { eventKey: "conexion", label: "API", icon: "bi bi-code-slash" },
         { eventKey: "reportes", label: "Reportes", icon: "bi bi-folder2-open" },
     ];
@@ -31,21 +29,17 @@ const PerfilTienda = () => {
     const renderizarVista = () => {
         switch (vistaActual) {
             case "dashboard":
-                return <TiendaDashboard idTienda={idUsuario}/>
+                return <TiendaDashboard idTienda={idUsuario} />
             case "informacion":
-                return <InformacionTienda idTienda={idUsuario}/>
+                return <InformacionTienda idTienda={idUsuario} />
             case "productos":
                 return <MisProductos idTienda={idUsuario} />
-            case "planes":
-                return <ObtenerPlan />
-            case "pagos":
-                return <HistorialPagos />
             case "conexion":
-                return <ConexionAPI idTienda={idUsuario}/>
+                return <ConexionAPI idTienda={idUsuario} />
             case "reportes":
                 return <ReportesTienda idTienda={idUsuario} />
             default:
-                return <TiendaDashboard idTienda={idUsuario}/>
+                return <TiendaDashboard idTienda={idUsuario} />
         }
     };
 

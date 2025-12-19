@@ -31,7 +31,6 @@ const PerfilEmpleado = () => {
         { eventKey: "tiendas", label: "Tiendas", icon: "bi bi-shop-window" },
         { eventKey: "empleados", label: "Empleados", icon: "bi bi-person-badge" },
         { eventKey: "solicitudes", label: "Solicitudes", icon: "bi bi-envelope-fill" },
-        { eventKey: "incidencias", label: "Incidencias", icon: "bi bi-exclamation-triangle-fill" },
         { eventKey: "planes", label: "Planes", icon: "bi bi-card-checklist" },
         { eventKey: "reportes", label: "Reportes", icon: "bi bi-folder2-open" },
     ];
@@ -52,8 +51,6 @@ const PerfilEmpleado = () => {
                 return <GestionEmpleados />
             case "solicitudes":
                 return <GestionSolicitudes idEmpleado={idUsuario} />;
-            case "incidencias":
-                return <GestionIncidencias />;
             case "planes":
                 return <GestionPlanes />
             case "reportes":

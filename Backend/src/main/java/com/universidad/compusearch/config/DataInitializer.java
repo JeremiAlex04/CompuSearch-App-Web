@@ -15,7 +15,11 @@ import com.universidad.compusearch.entity.TipoUsuario;
 import com.universidad.compusearch.repository.AtributoRepository;
 import com.universidad.compusearch.repository.CategoriaRepository;
 import com.universidad.compusearch.repository.EmpleadoRepository;
+import com.universidad.compusearch.repository.TiendaRepository;
 import com.universidad.compusearch.repository.UsuarioRepository;
+import com.universidad.compusearch.entity.Tienda;
+import com.universidad.compusearch.entity.TiendaAPI;
+import com.universidad.compusearch.entity.EstadoAPI;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,6 +33,7 @@ public class DataInitializer {
     private final CategoriaRepository categoriaRepository;
     private final UsuarioRepository usuarioRepository;
     private final EmpleadoRepository empleadoRepository;
+    private final TiendaRepository tiendaRepository;
     private final PasswordEncoder passwordEncoder;
 
     @Bean
@@ -37,6 +42,7 @@ public class DataInitializer {
             crearAtributos();
             crearCategorias();
             crearAdmin();
+            crearTienda();
         };
     }
 
@@ -123,7 +129,7 @@ public class DataInitializer {
         log.info("Creando usuario administrador...");
 
         Empleado admin = new Empleado();
-        
+
         admin.setUsername("admin");
         admin.setEmail("admin@test.com");
         admin.setContrasena(passwordEncoder.encode("Admin123!"));
@@ -138,5 +144,36 @@ public class DataInitializer {
         empleadoRepository.save(admin);
 
         log.info("Administrador creado con éxito");
+    }
+
+    private void crearTienda() {
+        if (usuarioRepository.findByUsername("tienda").isPresent()) {
+            log.info("El usuario tienda ya existe");
+            return;
+        }
+
+        log.info("Creando usuario tienda de prueba...");
+        Tienda tienda = new Tienda();
+        tienda.setUsername("tienda");
+        tienda.setEmail("tienda@test.com");
+        tienda.setContrasena(passwordEncoder.encode("Tienda123!"));
+        tienda.setActivo(true);
+        tienda.setTipoUsuario(TipoUsuario.TIENDA);
+        tienda.setFechaRegistro(LocalDateTime.now());
+        tienda.setNombre("Tienda de Prueba");
+        tienda.setTelefono("987654321");
+        tienda.setDescripcion("Tienda inicializada para pruebas de API");
+        tienda.setVerificado(true);
+        tienda.setFechaAfiliacion(LocalDateTime.now());
+
+        TiendaAPI api = new TiendaAPI();
+        api.setUrlBase("http://api.tiendaA.com");
+        api.setEstadoAPI(EstadoAPI.ACTIVA);
+        api.setProbada(true);
+        api.setTienda(tienda);
+        tienda.setTiendaAPI(api);
+
+        tiendaRepository.save(tienda);
+        log.info("Tienda de prueba creada con éxito");
     }
 }

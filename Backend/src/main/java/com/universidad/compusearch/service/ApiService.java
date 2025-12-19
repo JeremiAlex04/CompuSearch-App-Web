@@ -60,17 +60,17 @@ public class ApiService {
     }
 
     private void procesarProductosDeTienda(Tienda tienda) {
-        //String baseUrl = "http://localhost:8081/producto"; Usan sin docker
-        String baseUrl = "http://host.docker.internal:8081/producto";
+        // String baseUrl = "http://localhost:8081/producto"; Usan sin docker
+        String baseUrl = "http://api-simulator:8081/producto";
         String requestParam = tienda.getTiendaAPI().getUrlBase();
 
         try {
             log.info("Solicitando productos de la tienda {} a {}", tienda.getNombre(), baseUrl);
 
             String urlConParams = UriComponentsBuilder.fromUriString(baseUrl)
-                        .queryParam("direccion", requestParam)
-                        .build() 
-                        .toUriString();
+                    .queryParam("direccion", requestParam)
+                    .build()
+                    .toUriString();
 
             ResponseEntity<List<ProductoRequest>> response = restTemplate.exchange(
                     urlConParams,

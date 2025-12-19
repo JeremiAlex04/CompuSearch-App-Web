@@ -14,8 +14,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./backups:/var/backups
-    command: >
-      sh -c "apt-get update && apt-get install -y mysql-client gzip && java -jar app.jar"
+    command: [ "java", "-jar", "app.jar" ]
 
   frontend:
     build: ./frontend
@@ -35,14 +34,14 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
       - app-network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -77,14 +76,23 @@ services:
       - app-network
     restart: unless-stopped
 
+  api-simulator:
+    build: ./api
+    container_name: compusearch-api-simulator
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    restart: unless-stopped
+
 networks:
   app-network:
     driver: bridge
 
 volumes:
-  mysql_data:
-  prometheus_data:
-  grafana_data:
+  mysql_data: {}
+  prometheus_data: {}
+  grafana_data: {}
 
 configs:
   prometheus_config:

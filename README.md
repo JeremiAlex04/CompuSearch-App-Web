@@ -49,21 +49,47 @@ CompuSearch/
 
 ---
 
-## 🚀 Implementación local
+## 🚀 Ejecución del Proyecto (Recomendado)
 
-Sigue estos pasos para obtener una copia local del proyecto y ejecutarlo por primera vez:
+La forma más rápida y segura de ejecutar todo el ecosistema de CompuSearch es utilizando **Docker Compose**.
 
-1. **Clona el repositorio:**
-    ```bash
-    git clone https://github.com/EduMoralesCar/CompuSearch.git
-    cd CompuSearch
-    ```
-2. **Consulta las instrucciones detalladas en cada módulo:**
-    - [Backend (Spring Boot)](./Backend/README.md)
-    - [Frontend (Vite + React)](./Frontend/README.md)
+### 1. Requisitos
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y en ejecución.
 
-> **Nota:** Cada módulo tiene sus propios requisitos y pasos de instalación.  
-> Consulta el README de cada uno para ver dependencias, configuración y comandos de ejecución.
+### 2. Pasos para iniciar
+Desde la raíz del proyecto, ejecuta:
+```bash
+docker-compose up --build -d
+```
+
+### 3. Accesos y Credenciales
+| Servicio | URL | Credenciales |
+| :--- | :--- | :--- |
+| **Frontend** | [http://localhost:3000](http://localhost:3000) | - |
+| **Backend API** | [http://localhost:8080](http://localhost:8080) | - |
+| **Simulador API** | [http://localhost:8081](http://localhost:8081) | - |
+| **Grafana** | [http://localhost:3001](http://localhost:3001) | `admin` / `admin` |
+
+**Cuentas de prueba pre-configuradas:**
+- **Administrador (Empleado):** `admin` / `Admin123!`
+- **Tienda (Pruebas API):** `tienda` / `Tienda123!`
+
+---
+
+## 🧪 Flujo de Prueba de API
+Para probar la carga de productos desde el simulador:
+1. Inicia sesión como **Tienda**.
+2. Ve a la sección **API** en el panel lateral.
+3. Asegura que la URL sea: `http://api.tiendaA.com` (o usa B/C).
+4. Dale a **Probar conexión**.
+5. Ve a **Mis Productos** y pulsa el botón de sincronización.
+
+---
+
+## 🛠️ Implementación Local (Opcional)
+Si deseas ejecutar los módulos por separado sin Docker:
+1. **Frontend**: Consulta el [README de Frontend](./Frontend/README.md).
+2. **Backend**: Consulta el [README de Backend](./Backend/README.md).
 
 ---
 
