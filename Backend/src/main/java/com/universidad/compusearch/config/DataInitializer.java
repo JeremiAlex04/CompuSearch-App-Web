@@ -82,6 +82,7 @@ public class DataInitializer {
         }));
     }
 
+    // DATOS INICIALIZADOS PARA USUARIO Y ADMINISTRADOR
     // ===============================
     // CATEGORÍAS
     // ===============================
