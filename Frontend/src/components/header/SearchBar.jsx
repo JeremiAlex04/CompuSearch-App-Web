@@ -34,7 +34,7 @@ const SearchBar = () => {
         timerRef.current = setTimeout(async () => {
             try {
                 const res = await axios.get(
-                    `http://localhost:8080/componentes/buscar`,
+                    `/componentes/buscar`,
                     {
                         params: {
                             nombre: query,

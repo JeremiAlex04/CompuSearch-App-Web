@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const LogoutService = async () => {
-  return axios.post("http://localhost:8080/auth/logout", null, {
+  return axios.post("/auth/logout", null, {
     withCredentials: true,
   });
 };

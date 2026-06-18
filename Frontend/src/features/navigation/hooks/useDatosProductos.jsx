@@ -25,7 +25,7 @@ export const useDatosProductos = () => {
             try {
                 // Obtener todas las tiendas que venden el producto
                 const tiendasRes = await axios.get(
-                    `http://localhost:8080/componentes/tiendas?nombreProducto=${encodeURIComponent(nombreProducto)}`
+                    `/componentes/tiendas?nombreProducto=${encodeURIComponent(nombreProducto)}`
                 );
 
                 const tiendasData = tiendasRes.data;
@@ -39,7 +39,7 @@ export const useDatosProductos = () => {
 
                 // Obtener la información del producto de esa tienda
                 const productoRes = await axios.get(
-                    `http://localhost:8080/componentes/info?nombreProducto=${encodeURIComponent(nombreProducto)}&nombreTienda=${encodeURIComponent(nombreTiendaMasBarata)}`
+                    `/componentes/info?nombreProducto=${encodeURIComponent(nombreProducto)}&nombreTienda=${encodeURIComponent(nombreTiendaMasBarata)}`
                 );
 
                 const productoData = productoRes.data;

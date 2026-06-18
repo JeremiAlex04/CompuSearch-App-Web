@@ -5,7 +5,7 @@ export function useUsuario() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const baseUrl = "http://localhost:8080/usuario";
+    const baseUrl = "/usuario";
 
     const obtenerUsuarioPorId = useCallback(async (idUsuario) => {
         setLoading(true);

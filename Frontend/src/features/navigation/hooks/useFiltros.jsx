@@ -20,10 +20,10 @@ export default function useFiltros(categoriaSeleccionada) {
 
             try {
                 const [resCat, resPre, resMar, resTie] = await Promise.all([
-                    axios.get("http://localhost:8080/filtro/categorias"),
-                    axios.get("http://localhost:8080/filtro/precios", { params }),
-                    axios.get("http://localhost:8080/filtro/marcas", { params }),
-                    axios.get("http://localhost:8080/filtro/tiendas", { params })
+                    axios.get("/filtro/categorias"),
+                    axios.get("/filtro/precios", { params }),
+                    axios.get("/filtro/marcas", { params }),
+                    axios.get("/filtro/tiendas", { params })
                 ]);
 
                 setFiltroCategoria(resCat.data || []);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/etiquetas";
+const BASE_URL = "/etiquetas";
 
 export default function useEtiquetas() {
     const [etiquetas, setEtiquetas] = useState([]);

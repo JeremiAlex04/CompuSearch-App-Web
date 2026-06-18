@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const MeService = async () => {
-    return axios.get("http://localhost:8080/auth/me", {
+    return axios.get("/auth/me", {
         withCredentials: true,
     });
 };

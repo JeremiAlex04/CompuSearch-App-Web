@@ -49,7 +49,7 @@ export default function useProductosTiendas({
                 params.append("page", page);
                 params.append("size", size);
 
-                const baseUrl = "http://localhost:8080/componentes";
+                const baseUrl = "/componentes";
                 let endpoint = "/filtrar"; // Por defecto
 
                 // Si hay búsqueda por nombre

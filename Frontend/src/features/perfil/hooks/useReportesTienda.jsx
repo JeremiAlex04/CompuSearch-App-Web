@@ -35,21 +35,21 @@ const useReportesTienda = () => {
 
     const obtenerCatalogo = (idTienda) => {
         return ejecutarDescarga(
-            `http://localhost:8080/reportes/tiendas/${idTienda}/catalogo`,
+            `/reportes/tiendas/${idTienda}/catalogo`,
             "catalogo_productos"
         );
     };
 
     const obtenerStockBajo = (idTienda) => {
         return ejecutarDescarga(
-            `http://localhost:8080/reportes/tiendas/${idTienda}/stock-bajo`,
+            `/reportes/tiendas/${idTienda}/stock-bajo`,
             "productos_bajo_stock"
         );
     };
 
     const obtenerMetricas = (idTienda) => {
         return ejecutarDescarga(
-            `http://localhost:8080/reportes/tiendas/${idTienda}/metricas`,
+            `/reportes/tiendas/${idTienda}/metricas`,
             "metricas_productos"
         );
     };

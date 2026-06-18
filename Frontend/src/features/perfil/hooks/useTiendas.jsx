@@ -5,7 +5,7 @@ export function useTiendas() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const baseUrl = "http://localhost:8080/tiendas";
+    const baseUrl = "/tiendas";
 
     const obtenerTiendasPaginadas = useCallback(async (page = 0, size = 10, filters = {}) => {
         setLoading(true);
@@ -218,7 +218,7 @@ export function useTiendas() {
 
         try {
             const response = await axios.get(
-                `http://localhost:8080/componentes/${idTienda}`,
+                `/componentes/${idTienda}`,
                 {
                     params: {
                         page,
@@ -251,7 +251,7 @@ export function useTiendas() {
 
         try {
             const response = await axios.patch(
-                `http://localhost:8080/componentes/${idProductoTienda}/habilitado`,
+                `/componentes/${idProductoTienda}/habilitado`,
                 null,
                 {
                     params: { habilitado },
@@ -276,7 +276,7 @@ export function useTiendas() {
 
         try {
             const response = await axios.post(
-                `http://localhost:8080/api/${idTienda}/actualizar`,
+                `/api/${idTienda}/actualizar`,
                 null,
                 {
                     withCredentials: true
@@ -300,7 +300,7 @@ export function useTiendas() {
 
         try {
             const response = await axios.get(
-                `http://localhost:8080/tiendas/dashboard/${idTienda}`,
+                `/tiendas/dashboard/${idTienda}`,
                 null,
                 {
                     withCredentials: true

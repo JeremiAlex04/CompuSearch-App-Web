@@ -106,7 +106,7 @@ const SolicitudTiendaForm = ({ idUsuario, validarAutenticacion }) => {
         try {
 
             await axios.post(
-                `http://localhost:8080/solicitud/${idUsuario}`,
+                `/solicitud/${idUsuario}`,
                 formData ,
                 { withCredentials: true }
             );

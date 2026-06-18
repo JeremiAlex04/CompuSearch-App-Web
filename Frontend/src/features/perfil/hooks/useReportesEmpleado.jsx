@@ -10,7 +10,7 @@ const useReportesEmpleado = () => {
         setError(null);
 
         try {
-            const response = await axios.get(`http://localhost:8080/reportes/empleado${endpoint}`, {
+            const response = await axios.get(`/reportes/empleado${endpoint}`, {
                 params,
                 responseType: "blob", withCredentials: true
             });
