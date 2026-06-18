@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    build: ./Backend
     container_name: compusearch-backend
     env_file:
       - .env
@@ -14,10 +14,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./backups:/var/backups
-    command: [ "java", "-jar", "app.jar" ]
 
   frontend:
-    build: ./frontend
+    build: ./Frontend
     container_name: compusearch-frontend
     ports:
       - "3000:80"

@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import axios from 'axios';
 
 // Define la URL base de tu API
-const API_URL = 'http://localhost:8080/metricas'; // Asegúrate de usar el puerto correcto
+const API_URL = '/metricas'; // Asegúrate de usar el puerto correcto
 
 /**
  * Hook personalizado para manejar la lógica de las métricas (CRUD y actualizaciones).

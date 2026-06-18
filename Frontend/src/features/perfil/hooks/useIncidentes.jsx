@@ -12,7 +12,7 @@ export function useIncidentes() {
         setError(null);
         try {
             const response = await axios.get(
-                `http://localhost:8080/incidentes/${idUsuario}`,
+                `/incidentes/${idUsuario}`,
                 {
                     params: { page, size },
                     withCredentials: true
@@ -32,7 +32,7 @@ export function useIncidentes() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get("http://localhost:8080/incidentes", {
+            const response = await axios.get("/incidentes", {
                 params: { page, size },
                 withCredentials: true
             });
@@ -48,7 +48,7 @@ export function useIncidentes() {
 
     const eliminarIncidente = async (id) => {
         try {
-            await axios.delete(`http://localhost:8080/incidentes/${id}`, {
+            await axios.delete(`/incidentes/${id}`, {
                 withCredentials: true
             });
             setRespuesta((prev) => prev.filter((inc) => inc.idIncidente !== id));
@@ -61,7 +61,7 @@ export function useIncidentes() {
     const actualizarRevisado = async (id, revisado) => {
         try {
             await axios.put(
-                `http://localhost:8080/incidentes/${id}/revisado`,
+                `/incidentes/${id}/revisado`,
                 null,
                 {
                     params: { revisado },

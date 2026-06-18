@@ -23,7 +23,7 @@ export default function useFiltrosAdicionales(categoriaSeleccionada) {
             try {
                 const respuestas = await Promise.all(
                     atributos.map((nombreAtributo) =>
-                        axios.get(`http://localhost:8080/filtro/valores`, {
+                        axios.get(`/filtro/valores`, {
                             params: { nombreAtributo },
                         })
                     )

@@ -8,7 +8,7 @@ export const useCategorias = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const baseURL = "http://localhost:8080/categorias";
+    const baseURL = "/categorias";
 
     const obtenerCategoriasPaginadas = async (page = 0, size = 10, sort = 'idCategoria,asc') => {
         setLoading(true);

@@ -14,7 +14,7 @@ export function useSolicitudes() {
         setError(null);
         try {
             const response = await axios.get(
-                `http://localhost:8080/solicitud/${idUsuario}`,
+                `/solicitud/${idUsuario}`,
                 {
                     params: { page, size },
                     withCredentials: true
@@ -36,7 +36,7 @@ export function useSolicitudes() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`http://localhost:8080/solicitud`, {
+            const response = await axios.get(`/solicitud`, {
                 params: { page, size },
                 withCredentials: true
             });
@@ -56,7 +56,7 @@ export function useSolicitudes() {
         try {
 
             await axios.put(
-                `http://localhost:8080/solicitud/${idSolicitud}/estado`,
+                `/solicitud/${idSolicitud}/estado`,
                 null,
                 {
                     params: { nuevoEstado, idEmpleado },

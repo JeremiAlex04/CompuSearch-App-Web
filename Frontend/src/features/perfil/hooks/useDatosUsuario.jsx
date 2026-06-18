@@ -12,7 +12,7 @@ export const useDatosUsuario = (idUsuario) => {
         const fetchUsuario = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:8080/usuario/${idUsuario}`, {
+                const response = await axios.get(`/usuario/${idUsuario}`, {
                     withCredentials: true,
                 });
                 setUsuario(response.data);

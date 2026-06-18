@@ -55,7 +55,7 @@ const MisIncidentes = () => {
 
         try {
             await axios.post(
-                "http://localhost:8080/incidentes",
+                "/incidentes",
                 { titulo, descripcion, idUsuario },
                 { withCredentials: true }
             );

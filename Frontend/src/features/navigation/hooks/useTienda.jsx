@@ -9,7 +9,7 @@ export default function useTiendas() {
     useEffect(() => {
         const obtenerTiendas = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/tiendas/verificadas");
+                const response = await axios.get("/tiendas/verificadas");
                 setTiendas(response.data);
             } catch (err) {
                 setError(err.response?.data?.message || err.message);
