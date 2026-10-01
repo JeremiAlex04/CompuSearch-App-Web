@@ -1,0 +1,470 @@
+================================================================================
+          COMPUSEARCH PERÚ - BASE DE DATOS Y CATÁLOGO DE PRODUCTOS
+                   Especificaciones, Tiendas, Precios y Fotos
+================================================================================
+Fecha de Generación: 2026-10-01
+Plataforma / Sistema: CompuSearch E-Commerce & Mock Service Worker (MSW)
+Cobertura: Hardware de Computación y Componentes PC en Lima, Perú
+================================================================================
+
+--------------------------------------------------------------------------------
+1. DIRECTORIO DE TIENDAS Y SOCIOS COMERCIALES EN LIMA
+--------------------------------------------------------------------------------
+
+[Tienda ID: 1] CompuSearch Central
+- Dirección: Av. Principal 123 - San Isidro, Lima
+- Estado: ACTIVO
+- Teléfono: 555-0101
+- Servicios: Garantía Oficial 1 año / Envíos a todo Lima
+- Sitio Web: https://compusearch.com/tiendas/central
+- Ubicación GPS: https://maps.google.com/?q=San+Isidro+Lima
+
+[Tienda ID: 2] CompuSearch Norte
+- Dirección: Plaza Mayor 456 - Los Olivos, Lima
+- Estado: INACTIVO
+- Teléfono: 555-0202
+- Servicios: Soporte Local / Retiro en tienda
+- Sitio Web: https://compusearch.com/tiendas/norte
+- Ubicación GPS: https://maps.google.com/?q=Los+Olivos+Lima
+
+[Tienda ID: 3] pc Factory Perú
+- Dirección: Plaza San Miguel / Jockey Plaza / Comas, Lima
+- Estado: ACTIVO
+- Teléfono: +51 1 7161666
+- Servicios: Garantía Retail / Boleta / Factura / Asesoría técnica
+- Sitio Web: https://www.pcfactory.com.pe
+- Ubicación GPS: https://maps.google.com/?q=Plaza+San+Miguel+Lima
+
+[Tienda ID: 4] Grupo Compu & Visión
+- Dirección: Av. Garcilaso de la Vega 1251, Tienda #123 (Galería CompuPlaza), Lima
+- Estado: ACTIVO
+- Teléfono: 987 163 458
+- Servicios: Importación directa / Venta mayorista y minorista de componentes
+- Sitio Web: https://compuvision.pe
+- Ubicación GPS: https://maps.google.com/?q=CompuPlaza+Wilson+Lima
+
+[Tienda ID: 5] SB Data
+- Dirección: Av. Garcilaso de la Vega 1236, Tienda 324 (Galería Wilson), Lima
+- Estado: ACTIVO
+- Teléfono: 994 061 341
+- Servicios: Armado de PC a medida / Cotización por WhatsApp
+- Sitio Web: https://sbdata.com.pe
+- Ubicación GPS: https://maps.google.com/?q=Wilson+1236+Lima
+
+[Tienda ID: 6] Infotec Perú
+- Dirección: Grupo Infotec - Tienda Virtual y Física Lima
+- Estado: ACTIVO
+- Teléfono: 935 715 405
+- Servicios: Distribuidor autorizado Intel y AMD
+- Sitio Web: https://infotec.com.pe
+- Ubicación GPS: https://maps.google.com/?q=Infotec+Lima
+
+[Tienda ID: 7] Rayotec
+- Dirección: RUC 20608329839 - Grupo Tecnológico M&V S.A.C., Lima
+- Estado: ACTIVO
+- Teléfono: 974 578 820
+- Servicios: Acepta MercadoPago / Envíos a provincia
+- Sitio Web: https://rayotec.pe
+- Ubicación GPS: https://maps.google.com/?q=Rayotec+Lima
+
+[Tienda ID: 8] Memory Kings
+- Dirección: Minorista y Mayorista Wilson / Tienda Online, Lima
+- Estado: ACTIVO
+- Teléfono: (01) 619-3000
+- Servicios: Garantía extendida en componentes / Servicio postventa
+- Sitio Web: https://www.memorykings.com.pe
+- Ubicación GPS: https://maps.google.com/?q=Memory+Kings+Wilson+Lima
+
+[Tienda ID: 9] SercoPlus
+- Dirección: Galería CompuPlaza - Wilson, Lima
+- Estado: ACTIVO
+- Teléfono: (01) 423-1122
+- Servicios: Garantía oficial de 1 año en hardware
+- Sitio Web: https://www.sercoplus.com
+- Ubicación GPS: https://maps.google.com/?q=SercoPlus+Wilson+Lima
+
+
+--------------------------------------------------------------------------------
+2. CATEGORÍAS DE HARDWARE E ÍCONOS DE IMAGEN
+--------------------------------------------------------------------------------
+
+1. Procesadores (CPU)
+   - Ícono ID: cpu
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004699.png
+
+2. Tarjetas Gráficas (GPU)
+   - Ícono ID: gpu
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004724.png
+
+3. Memoria RAM
+   - Ícono ID: ram
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004712.png
+
+4. Placas Madre (Motherboard)
+   - Ícono ID: mobo
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004732.png
+
+5. Almacenamiento (SSD / HDD)
+   - Ícono ID: ssd
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004705.png
+
+6. Gabinetes / Cases
+   - Ícono ID: case
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004718.png
+
+7. Sistemas de Enfriamiento
+   - Ícono ID: cooler
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004728.png
+
+8. Fuentes de Poder
+   - Ícono ID: psu
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004715.png
+
+9. Periféricos & Accesorios
+   - Ícono ID: perifericos
+   - URL Ícono: https://cdn-icons-png.flaticon.com/512/2004/2004738.png
+
+
+--------------------------------------------------------------------------------
+3. CATÁLOGOS Y FICHAS TÉCNICAS DETALLADAS DE PRODUCTOS
+--------------------------------------------------------------------------------
+
+[Producto ID: 101] Procesador Intel Core i9-14900K 24-Cores
+- Categoría: CPU
+- Especificaciones Técnicas: 24 Núcleos (8 Performance + 16 Efficient), 32 Hilos, Frecuencia Turbo hasta 6.0 GHz, 36MB Intel Smart Cache, Socket LGA1700, TDP 125W/253W. Gráficos integrados UHD Intel 770. Compatible con memorias DDR4/DDR5 y PCIe 5.0.
+- Estatus: DISPONIBLE | Stock: 10 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $445.00  [MEJOR PRECIO]
+  * CompuSearch Central: $450.00
+  * Memory Kings: $459.00
+  * pc Factory Perú: $465.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61L2r5K2EGL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compusearch.com/productos/101
+
+[Producto ID: 102] Tarjeta Gráfica RTX 4090 24GB GDDR6X
+- Categoría: GPU
+- Especificaciones Técnicas: 24GB GDDR6X 384-bit, 16384 CUDA Cores, Arquitectura Ada Lovelace, DLSS 3, Ray Tracing 3ra Gen, Boost 2.52 GHz. Requisito de Fuente: 850W+, Conector 16-pin PCIe 5.0.
+- Estatus: STOCK BAJO | Stock: 3 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $1,580.00  [MEJOR PRECIO]
+  * SercoPlus: $1,590.00
+  * CompuSearch Central: $1,599.99
+  * pc Factory Perú: $1,620.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71R2nN6vBfL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compusearch.com/productos/102
+
+[Producto ID: 103] Memoria RAM 32GB (2x16GB) DDR5 6000MHz
+- Categoría: RAM
+- Especificaciones Técnicas: Kit 32GB (2x16GB), Velocidad 6000MHz, Latencia CL36 (1.35V), Soporte Intel XMP 3.0 / AMD EXPO, Disipador de Aluminio Anodizado Negro, Formato UDIMM 288-pin.
+- Estatus: DISPONIBLE | Stock: 25 unidades
+- Tiendas donde se encuentra y Precios:
+  * CompuSearch Norte: $120.50  [MEJOR PRECIO]
+  * SB Data Wilson: $125.00
+  * Infotec Perú: $128.00
+  * Grupo Compu & Visión: $135.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61K5A-L+2oL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compusearch.com/productos/103
+
+[Producto ID: 104] Procesador Intel Core i5-12400F 6 Núcleos
+- Categoría: CPU
+- Especificaciones Técnicas: 6 Núcleos (6P), 12 Hilos, Frecuencia Turbo 4.4 GHz, 18MB Cache, Socket LGA1700, TDP 65W, Sin gráficos integrados (requiere GPU). Incluye Cooler Intel Laminar RM1.
+- Estatus: DISPONIBLE | Stock: 30 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $180.00  [MEJOR PRECIO]
+  * Infotec Perú: $182.50
+  * pc Factory Perú: $183.75
+  * Rayotec: $185.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/51rP-4L2P3L._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/45231
+
+[Producto ID: 105] Procesador AMD Ryzen 5 5500 6 Cuerpos 4.2GHz
+- Categoría: CPU
+- Especificaciones Técnicas: 6 Núcleos, 12 Hilos, Frecuencia Base 3.6 GHz / Boost 4.2 GHz, 19MB Cache, Socket AM4, TDP 65W, Arquitectura Zen 3. Incluye Cooler Wraith Stealth.
+- Estatus: DISPONIBLE | Stock: 17 unidades
+- Tiendas donde se encuentra y Precios:
+  * Infotec Perú: $105.00  [MEJOR PRECIO]
+  * SercoPlus: $107.50
+  * pc Factory Perú: $108.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61vGQNUEsGL._AC_SL1200_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/46112
+
+[Producto ID: 106] Procesador AMD Ryzen 7 5700G 8 Cuerpos 4.6GHz
+- Categoría: CPU
+- Especificaciones Técnicas: 8 Núcleos, 16 Hilos, Frecuencia Base 3.8 GHz / Boost 4.6 GHz, Gráficos Integrados Radeon Vega 8 (2000 MHz), Socket AM4, 20MB Cache, TDP 65W. Incluye Cooler Wraith Stealth.
+- Estatus: DISPONIBLE | Stock: 11 unidades
+- Tiendas donde se encuentra y Precios:
+  * Memory Kings: $220.00  [MEJOR PRECIO]
+  * Grupo Compu & Visión: $222.00
+  * pc Factory Perú: $224.25
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/51f2A6M47xL._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/43009
+
+[Producto ID: 107] Procesador Intel Core i7-12700 12 Cuerpos 4.9GHz
+- Categoría: CPU
+- Especificaciones Técnicas: 12 Núcleos (8P + 4E), 20 Hilos, Frecuencia Turbo 4.9 GHz, 25MB Cache, Socket LGA1700, Gráficos UHD 770, TDP 65W/180W.
+- Estatus: DISPONIBLE | Stock: 12 unidades
+- Tiendas donde se encuentra y Precios:
+  * CompuSearch Central: $399.00  [MEJOR PRECIO]
+  * SB Data Wilson: $402.00
+  * pc Factory Perú: $405.35
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/51B-74V2cDL._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/45001
+
+[Producto ID: 108] Procesador AMD Ryzen 5 7600X AM5 5.3GHz
+- Categoría: CPU
+- Especificaciones Técnicas: 6 Núcleos, 12 Hilos, Frecuencia Base 4.7 GHz / Boost 5.3 GHz, Arquitectura Zen 4 (5nm), Socket AM5, 38MB Cache, TDP 105W. Requiere memorias DDR5.
+- Estatus: DISPONIBLE | Stock: 6 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $248.00  [MEJOR PRECIO]
+  * Memory Kings: $250.00
+  * pc Factory Perú: $251.30
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61b17L-7e5L._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/47802
+
+[Producto ID: 109] Tarjeta de Video GeForce RTX 3050 6GB MSI Ventus 2X
+- Categoría: GPU
+- Especificaciones Técnicas: 6GB GDDR6 96-bit, 2304 CUDA Cores, Dual Fan, PCI Express 4.0, Salidas 2x DP / 2x HDMI, TDP 75W (Sin cable de alimentación adicional).
+- Estatus: DISPONIBLE | Stock: 23 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $265.00  [MEJOR PRECIO]
+  * Rayotec: $268.00
+  * pc Factory Perú: $270.20
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71a6P6M3C7L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/49102
+
+[Producto ID: 110] Tarjeta de Video GeForce RTX 4060 8GB MSI Shadow 2X
+- Categoría: GPU
+- Especificaciones Técnicas: 8GB GDDR6 128-bit, 3072 CUDA Cores, DLSS 3, Boost 2460 MHz, Requisito de Fuente: 550W+, Conector 1x 8-pin, Salidas 3x DP 1.4a / 1x HDMI 2.1a.
+- Estatus: DISPONIBLE | Stock: 8 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $449.00  [MEJOR PRECIO]
+  * SercoPlus: $452.00
+  * pc Factory Perú: $459.40
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71I3P6+bKML._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/50123
+
+[Producto ID: 111] Tarjeta de Video GeForce RTX 4070 12GB Asus Prime OC
+- Categoría: GPU
+- Especificaciones Técnicas: 12GB GDDR6X 192-bit, 5888 CUDA Cores, DLSS 3.5, Boost 2550 MHz, Triple Fan Axial-tech, Placa trasera de aluminio, Requisito Fuente 650W.
+- Estatus: STOCK BAJO | Stock: 4 unidades
+- Tiendas donde se encuentra y Precios:
+  * CompuSearch Central: $1,040.00  [MEJOR PRECIO]
+  * Memory Kings: $1,049.00
+  * pc Factory Perú: $1,054.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81R4q+nN3AL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://www.pcfactory.com.pe/producto/51004
+
+[Producto ID: 112] Placa MSI MAG X870E GAMING MAX WIFI AM5 DDR5
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket AM5 para Ryzen 7000/8000/9000, Chipset X870E, 4x DDR5 hasta 8000+ MHz OC, 4x M.2 NVMe (PCIe 5.0), Wi-Fi 7 + LAN 5G, VRM 18+2+1 Fases.
+- Estatus: STOCK BAJO | Stock: 2 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $299.00  [MEJOR PRECIO]
+  * SB Data Wilson: $305.00
+  * pc Factory Perú: $310.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81G3+7d+C3L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/112
+
+[Producto ID: 113] Tarjeta de Video RTX 4050 8GB Gigabyte Windforce OC
+- Categoría: GPU
+- Especificaciones Técnicas: 8GB GDDR6 128-bit, Dual Fan Windforce 2X, DLSS 3, Boost 2475 MHz, Placa de protección trasera.
+- Estatus: DISPONIBLE | Stock: 10 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $365.00  [MEJOR PRECIO]
+  * Rayotec: $369.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71k4B7a1wCL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/113
+
+[Producto ID: 114] Placa Gigabyte B860M K Gen5 LGA 1851 DDR5
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket LGA1851 para procesadores Intel Core Ultra, Chipset B860, 2x DDR5, PCIe 5.0 x16, M.2 NVMe PCIe 4.0, Realtek GbE LAN.
+- Estatus: DISPONIBLE | Stock: 5 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $113.00  [MEJOR PRECIO]
+  * Infotec Perú: $116.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81+c7B2527L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/114
+
+[Producto ID: 115] Placa Asus ROG STRIX X870E-E GAMING WIFI7 AM5
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket AM5 para Ryzen 7000/8000/9000, Chipset X870E, DDR5 8000+ MHz OC, 5x M.2 (3x PCIe 5.0), Wi-Fi 7, Intel 2.5G LAN, Audio SupremeFX ALC4080.
+- Estatus: STOCK BAJO | Stock: 1 unidad
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $651.00  [MEJOR PRECIO]
+  * Memory Kings: $660.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81c-99C1L2L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/115
+
+[Producto ID: 116] Memoria RAM 32GB (2x16GB) Corsair Vengeance DDR5 6000MHz
+- Categoría: RAM
+- Especificaciones Técnicas: Kit 32GB (2x16GB) DDR5 6000MHz CL36, Disipador de Aluminio Anodizado, Soporte Intel XMP 3.0 / AMD EXPO, Formato UDIMM.
+- Estatus: DISPONIBLE | Stock: 8 unidades
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $135.00  [MEJOR PRECIO]
+  * Memory Kings: $138.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61K5A-L+2oL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/116
+
+[Producto ID: 117] Disco Sólido SSD 2TB Huadisk M.2 NVMe PCIe 4.0
+- Categoría: Almacenamiento
+- Especificaciones Técnicas: 2TB M.2 2280 NVMe PCIe Gen4 x4, Lectura secuencial hasta 5000 MB/s, Escritura hasta 4500 MB/s, Disipador Térmico Integrado.
+- Estatus: STOCK BAJO | Stock: 1 unidad
+- Tiendas donde se encuentra y Precios:
+  * Grupo Compu & Visión: $330.00  [MEJOR PRECIO]
+  * SercoPlus: $335.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61G+d2R4bTL._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/117
+
+[Producto ID: 118] Disco Sólido SSD 1TB Samsung 990 Pro M.2 NVMe 2.0
+- Categoría: Almacenamiento
+- Especificaciones Técnicas: 1TB, M.2 2280 NVMe 2.0 PCIe 4.0, Lectura hasta 7450 MB/s, Escritura hasta 6900 MB/s, Controller Samsung Pascal, 1GB DRAM.
+- Estatus: DISPONIBLE | Stock: 4 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $148.00  [MEJOR PRECIO]
+  * Grupo Compu & Visión: $150.00
+  * CompuSearch Norte: $152.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71oX6Z1T8BL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://compuvision.pe/producto/118
+
+[Producto ID: 119] Case Antec VCX100M 450W Micro-ATX 5 Fans RGB
+- Categoría: Case
+- Especificaciones Técnicas: Chasis Micro-ATX / Mini-ITX, Panel lateral de vidrio templado, Incluye 5 ventiladores RGB preinstalados y Fuente de Poder 450W integrada.
+- Estatus: STOCK BAJO | Stock: 1 unidad
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $55.00  [MEJOR PRECIO]
+  * Rayotec: $58.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71K2g7P2xTL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/119
+
+[Producto ID: 120] Case Antryx Elegant 630 350W ATX Mid Tower
+- Categoría: Case
+- Especificaciones Técnicas: Gabinete Mid Tower ATX / mATX, Incluye fuente 350W, Puertos frontales USB 3.0 + Audio HD, Bahías 2.5" SSD y 3.5" HDD.
+- Estatus: DISPONIBLE | Stock: 7 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $41.50  [MEJOR PRECIO]
+  * Infotec Perú: $43.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61dG7b2S8ML._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/120
+
+[Producto ID: 121] Cooler CPU Thermalright Peerless Assassin 120 SE Dual Tower
+- Categoría: Enfriamiento
+- Especificaciones Técnicas: Disipador por aire de Doble Torre, 6 Heatpipes de cobre de 6mm, 2x Ventiladores PWM de 120mm (1550 RPM), Soporte Sockets LGA1700/1200/115X y AMD AM5/AM4.
+- Estatus: STOCK BAJO | Stock: 2 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $106.73  [MEJOR PRECIO]
+  * SercoPlus: $109.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71R2c8k1a2L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/121
+
+[Producto ID: 122] Mainboard Gigabyte B760M E DDR5 LGA 1700 mATX
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket LGA1700 para Intel 12da/13ra/14ta Gen, Chipset B760, 2x DDR5 hasta 5600MHz, PCIe 4.0 x16, 2x M.2 NVMe PCIe 4.0, Realtek GbE LAN.
+- Estatus: DISPONIBLE | Stock: 4 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $107.10  [MEJOR PRECIO]
+  * pc Factory Perú: $110.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81+c7B2527L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/122
+
+[Producto ID: 123] Mainboard Gigabyte H810M K DDR5 LGA 1851 Intel Core Ultra
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket LGA1851 para procesadores Intel Core Ultra 200, Chipset H810, 2x DIMM DDR5, PCIe 4.0, M.2 NVMe, LAN GbE.
+- Estatus: DISPONIBLE | Stock: 4 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $95.03  [MEJOR PRECIO]
+  * Infotec Perú: $98.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81+c7B2527L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/123
+
+[Producto ID: 124] Memoria RAM 16GB DDR4 Hiksemi Armor Black 3200MHz
+- Categoría: RAM
+- Especificaciones Técnicas: Módulo individual 16GB DDR4, Frecuencia 3200MHz CL16, Disipador térmico de aluminio negro, 1.35V.
+- Estatus: DISPONIBLE | Stock: 5 unidades
+- Tiendas donde se encuentra y Precios:
+  * SB Data Wilson: $139.00  [MEJOR PRECIO]
+  * Rayotec: $142.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61fK9+3Zc2L._AC_SL1000_.jpg
+- Enlace Ficha Producto: https://sbdata.com.pe/producto/124
+
+[Producto ID: 125] Mainboard MSI A520M-A PRO Socket AM4 DDR4
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket AM4 para procesadores AMD Ryzen 3000/4000/5000, Chipset A520, 2x DDR4 hasta 4600MHz OC, PCIe 3.0 x16, M.2 NVMe, GbE LAN.
+- Estatus: DISPONIBLE | Stock: 15 unidades
+- Tiendas donde se encuentra y Precios:
+  * Infotec Perú: $53.75  [MEJOR PRECIO]
+  * Rayotec: $55.00
+  * pc Factory Perú: $57.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81b2K2+d8AL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://infotec.com.pe/producto/125
+
+[Producto ID: 126] Mainboard ASUS PRIME A520M-K AMD Ryzen AM4
+- Categoría: Motherboard
+- Especificaciones Técnicas: Socket AM4, Chipset A520, 2x DDR4 4600MHz OC, M.2 PCIe 3.0 x4, HDMI / D-Sub, GbE LAN, Fan Xpert.
+- Estatus: DISPONIBLE | Stock: 12 unidades
+- Tiendas donde se encuentra y Precios:
+  * Infotec Perú: $56.50  [MEJOR PRECIO]
+  * SercoPlus: $58.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/81x-9L2C9GL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://infotec.com.pe/producto/126
+
+[Producto ID: 127] Mouse Logitech G203 Lightsync Optical 8000 DPI RGB
+- Categoría: Periféricos
+- Especificaciones Técnicas: Sensor Óptico de grado de juego 200 - 8000 DPI, 6 Botones Programables, Iluminación RGB Lightsync con ondas de color, Conexión USB.
+- Estatus: DISPONIBLE | Stock: 20 unidades
+- Tiendas donde se encuentra y Precios:
+  * Rayotec: $24.00  [MEJOR PRECIO]
+  * SB Data Wilson: $25.50
+  * pc Factory Perú: $27.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/61UxfXTUyvL._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://rayotec.pe/producto/127
+
+[Producto ID: 128] Fuente de Poder Gigabyte 850W 80+ Gold (GP-UD850GM)
+- Categoría: Fuentes
+- Especificaciones Técnicas: Potencia 850W, Certificación 80 PLUS Gold (eficiencia 90%), Totalmente Modular, Condensadores 100% Japoneses, Ventilador de 120mm con rodamiento hidráulico (HYB), Protecciones OVP/OPP/SCP/UVP/OCP/OTP.
+- Estatus: DISPONIBLE | Stock: 8 unidades
+- Tiendas donde se encuentra y Precios:
+  * Rayotec: $110.80  [MEJOR PRECIO]
+  * Grupo Compu & Visión: $112.50
+  * SercoPlus: $115.00
+- Enlace Imagen HD: https://m.media-amazon.com/images/I/71f-51v5C2L._AC_SL1500_.jpg
+- Enlace Ficha Producto: https://rayotec.pe/producto/128
+
+
+--------------------------------------------------------------------------------
+4. MATRIZ COMPARATIVA DE PRECIOS POR TIENDA ($ USD)
+--------------------------------------------------------------------------------
+
+ID  | Producto / Componente                   | CompuSearch | pc Factory | Compu & Visión | SB Data | Infotec | Rayotec | Memory Kings | SercoPlus | Precio Mínimo ($)
+----|-----------------------------------------|-------------|------------|----------------|---------|---------|---------|--------------|-----------|------------------
+101 | Intel Core i9-14900K 24-Cores          | $450.00     | $465.00    | $445.00        | -       | -       | -       | $459.00      | -         | $445.00
+102 | GeForce RTX 4090 24GB GDDR6X            | $1599.99    | $1620.00   | $1580.00       | -       | -       | -       | -            | $1590.00  | $1580.00
+103 | RAM 32GB (2x16GB) DDR5 6000MHz          | $120.50     | -          | $135.00        | $125.00 | $128.00 | -       | -            | -         | $120.50
+104 | Intel Core i5-12400F 6 Núcleos          | -           | $183.75    | -              | $180.00 | $182.50 | $185.00 | -            | -         | $180.00
+105 | AMD Ryzen 5 5500 6C 4.2GHz              | -           | $108.00    | -              | -       | $105.00 | -       | -            | $107.50   | $105.00
+106 | AMD Ryzen 7 5700G 8C 4.6GHz             | -           | $224.25    | $222.00        | -       | -       | -       | $220.00      | -         | $220.00
+107 | Intel Core i7-12700 12C 4.9GHz          | $399.00     | $405.35    | -              | $402.00 | -       | -       | -            | -         | $399.00
+108 | AMD Ryzen 5 7600X AM5 5.3GHz            | -           | $251.30    | $248.00        | -       | -       | -       | $250.00      | -         | $248.00
+109 | GeForce RTX 3050 6GB MSI Ventus 2X      | -           | $270.20    | -              | $265.00 | -       | $268.00 | -            | -         | $265.00
+110 | GeForce RTX 4060 8GB MSI Shadow 2X      | -           | $459.40    | $449.00        | -       | -       | -       | -            | $452.00   | $449.00
+111 | GeForce RTX 4070 12GB Asus Prime OC     | $1040.00    | $1054.00   | -              | -       | -       | -       | $1049.00     | -         | $1040.00
+112 | Placa MSI MAG X870E GAMING MAX AM5      | -           | $310.00    | $299.00        | $305.00 | -       | -       | -            | -         | $299.00
+113 | GeForce RTX 4050 8GB Gigabyte Windforce | -           | -          | $365.00        | -       | -       | $369.00 | -            | -         | $365.00
+114 | Placa Gigabyte B860M K Gen5 LGA 1851   | -           | -          | $113.00        | -       | $116.00 | -       | -            | -         | $113.00
+115 | Placa Asus ROG STRIX X870E-E AM5        | -           | -          | $651.00        | -       | -       | -       | $660.00      | -         | $651.00
+116 | RAM 32GB Corsair Vengeance DDR5         | -           | -          | $135.00        | -       | -       | -       | $138.00      | -         | $135.00
+117 | SSD 2TB Huadisk M.2 NVMe PCIe 4.0       | -           | -          | $330.00        | -       | -       | -       | -            | $335.00   | $330.00
+118 | SSD 1TB Samsung 990 Pro M.2 NVMe 2.0    | $152.00     | -          | $150.00        | $148.00 | -       | -       | -            | -         | $148.00
+119 | Case Antec VCX100M Micro-ATX 5 Fans RGB | -           | -          | -              | $55.00  | -       | $58.00  | -            | -         | $55.00
+120 | Case Antryx Elegant 630 350W ATX        | -           | -          | -              | $41.50  | $43.00  | -       | -            | -         | $41.50
+121 | Cooler CPU Thermalright Peerless SE     | -           | -          | -              | $106.73 | -       | -       | -            | $109.00   | $106.73
+122 | Mainboard Gigabyte B760M E DDR5         | -           | $110.00    | -              | $107.10 | -       | -       | -            | -         | $107.10
+123 | Mainboard Gigabyte H810M K DDR5         | -           | -          | -              | $95.03  | $98.00  | -       | -            | -         | $95.03
+124 | RAM 16GB DDR4 Hiksemi Armor Black       | -           | -          | -              | $139.00 | -       | $142.00 | -            | -         | $139.00
+125 | Mainboard MSI A520M-A PRO AM4           | -           | $57.00     | -              | -       | $53.75  | $55.00  | -            | -         | $53.75
+126 | Mainboard ASUS PRIME A520M-K AM4        | -           | -          | -              | -       | $56.50  | -       | -            | $58.00    | $56.50
+127 | Mouse Logitech G203 Lightsync RGB       | -           | $27.00     | -              | $25.50  | -       | $24.00  | -            | -         | $24.00
+128 | Fuente Gigabyte 850W 80+ Gold           | -           | -          | $112.50        | -       | -       | $110.80 | -            | $115.00   | $110.80
+
+================================================================================
+Fin del Documento - CompuSearch Perú
+================================================================================

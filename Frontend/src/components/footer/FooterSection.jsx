@@ -7,7 +7,7 @@ const FooterSection = ({ title, links }) => (
         <ul className="list-unstyled">
             {links.map(({ label, to }, index) => (
                 <li key={index}>
-                    <NavLink to={to} className="text-white text-decoration-none">
+                    <NavLink to={to} className="footer-link">
                         {label}
                     </NavLink>
                 </li>

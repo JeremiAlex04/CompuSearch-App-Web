@@ -1,0 +1,113 @@
+"COMPUSEARCH - DASHBOARD BASE DE DATOS, TIENDAS Y CATALOGO WEB",,,,
+"Sistema Integrado con Imágenes, Enlaces de Tiendas y Endpoints MSW | v3.0",,,,
+
+INDICADORES CLAVE DE RENDIMIENTO (KPIs) - INVENTARIO GENERAL,,,,
+Indicador / KPI,Valor / Resultado,Origen de Datos,,
+Total Productos Registrados,,Tabla Productos (Items),,
+Total Unidades en Stock,,Tabla Productos (Unidades),,
+Valor Total Inventario ($),,Tabla Productos ($ USD),,
+Tiendas Comercializadoras,,Tabla Tiendas,,
+Tiendas Activas en Sistema,,Tabla Tiendas (Estatus ACTIVO),,
+Usuarios Registrados,,Tabla Usuarios,,
+Empleados Registrados,,Tabla Empleados,,
+Incidentes Pendientes,,Mesa de Ayuda (Incidentes),,
+Categorías de Hardware,,Pestaña Categorías,,
+Endpoints API MSW Definidos,,Pestaña Endpoints API,,
+
+
+RESUMEN DE STOCK Y VALOR DE INVENTARIO POR TIENDA / FUENTE,,,,
+Tienda / Fuente Comercial,Productos Distintos,Stock Total (Unid.),Valor Total ($),Enlace Web / Catálogo
+pc Factory Perú,,,,
+Grupo Compu & Visión,,,,
+SB Data,,,,
+Infotec Perú,,,,
+Rayotec,,,,
+CompuSearch Central / Norte,,,,
+TOTAL ACUMULADO TIENDAS,,,,-
+ID,Vista Previa,Nombre del Producto / Componente,Categoría,Stock,Precio Unit. ($),Valor Total ($),Tienda / Fuente de Origen,Ubicación / Dirección de la Tienda,Estatus,Enlace Foto / Imagen (URL),Enlace Web / Tienda (URL)
+
+101,,Procesador Intel Core i9-14900K 24-Cores,CPU,10,$450.00,,CompuSearch Central,Av. Principal 123 - San Isidro,DISPONIBLE,,
+102,,Tarjeta Gráfica RTX 4090 24GB GDDR6X,GPU,3,"$1,599.99",,CompuSearch Central,Av. Principal 123 - San Isidro,STOCK BAJO,,
+103,,Memoria RAM 32GB (2x16GB) DDR5 6000MHz,RAM,25,$120.50,,CompuSearch Norte,Plaza Mayor 456 - Los Olivos,DISPONIBLE,,
+104,,Procesador Intel Core i5-12400F 6 Núcleos,CPU,30,$183.75,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+105,,Procesador AMD Ryzen 5 5500 6 Cursos 4.2GHz,CPU,17,$108.00,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+106,,Procesador AMD Ryzen 7 5700G 8 Cursos 4.6GHz,CPU,11,$224.25,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+107,,Procesador Intel Core i7-12700 12 Cursos 4.9GHz,CPU,12,$405.35,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+108,,Procesador AMD Ryzen 5 7600X AM5 5.3GHz,CPU,6,$251.30,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+109,,Tarjeta de Video GeForce RTX 3050 6GB MSI Ventus 2X,GPU,23,$270.20,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+110,,Tarjeta de Video GeForce RTX 5060 8GB MSI Shadow 2X,GPU,8,$459.40,,pc Factory Perú,Plaza San Miguel / Jockey Plaza,DISPONIBLE,,
+111,,Tarjeta de Video GeForce RTX 5070 12GB Asus Prime OC,GPU,4,"$1,054.00",,pc Factory Perú,Plaza San Miguel / Jockey Plaza,STOCK BAJO,,
+112,,Placa MSI MAG X870E GAMING MAX WIFI AM5 DDR5,Motherboard,2,$299.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,STOCK BAJO,,
+113,,Tarjeta de Video RTX 5050 8GB Gigabyte Windforce OC,GPU,10,$365.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,DISPONIBLE,,
+114,,Placa Gigabyte B860M K Gen5 LGA 1851 DDR5,Motherboard,5,$113.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,DISPONIBLE,,
+115,,Placa Asus ROG STRIX X870E-E GAMING WIFI7 AM5,Motherboard,1,$651.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,STOCK BAJO,,
+116,,Memoria RAM 32GB (2x16GB) Corsair Vengeance DDR5 6000MHz,RAM,8,$135.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,DISPONIBLE,,
+117,,Disco Sólido SSD 2TB Huadisk M.2 NVMe PCIe 4.0,Almacenamiento,1,$330.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,STOCK BAJO,,
+118,,Disco Sólido SSD 1TB Samsung 990 Pro M.2 NVMe 2.0,Almacenamiento,4,$150.00,,Grupo Compu & Visión,Galería Compuplaza - Wilson 1251 #123,DISPONIBLE,,
+119,,Case Antec VCX100M 450W Micro-ATX 5 Fans RGB,Case,1,$55.00,,SB Data,"Wilson 1236, Tienda 324 - Lima",STOCK BAJO,,
+120,,Case Antryx Elegant 630 350W ATX Mid Tower,Case,7,$41.50,,SB Data,"Wilson 1236, Tienda 324 - Lima",DISPONIBLE,,
+121,,Cooler CPU Thermalright Peerless Assassin 120 SE Dual Tower,Enfriamiento,2,$106.73,,SB Data,"Wilson 1236, Tienda 324 - Lima",STOCK BAJO,,
+122,,Mainboard Gigabyte B760M E DDR5 LGA 1700 mATX,Motherboard,4,$107.10,,SB Data,"Wilson 1236, Tienda 324 - Lima",DISPONIBLE,,
+123,,Mainboard Gigabyte H810M K DDR5 LGA 1851 Intel Core Ultra,Motherboard,4,$95.03,,SB Data,"Wilson 1236, Tienda 324 - Lima",DISPONIBLE,,
+124,,Memoria RAM 16GB DDR4 Hiksemi Armor Black 3200MHz,RAM,5,$139.00,,SB Data,"Wilson 1236, Tienda 324 - Lima",DISPONIBLE,,
+125,,Mainboard MSI A520M-A PRO Socket AM4 DDR4,Motherboard,15,$53.75,,Infotec Perú,Lima - Grupo Infotec,DISPONIBLE,,
+126,,Mainboard ASUS PRIME A520M-K AMD Ryzen AM4,Motherboard,12,$56.50,,Infotec Perú,Lima - Grupo Infotec,DISPONIBLE,,
+127,,Mouse Logitech G203 Lightsync Optical 8000 DPI RGB,Periféricos,20,$24.00,,Rayotec,RUC 20608329839 - Grupo M&V,DISPONIBLE,,
+128,,Fuente de Poder Gigabyte 850W 80+ Gold (GP-UD850GM),Fuentes,8,$110.80,,Rayotec,RUC 20608329839 - Grupo M&V,DISPONIBLE,,
+,,TOTAL ACUMULADO INVENTARIO,,,,,,,,,
+ID,Nombre Comercial de la Tienda,Dirección / Ubicación Física,Estado,Teléfono de Contacto,Garantía & Servicios,Sitio Web / Catálogo Online (URL),Mapa GPS / Ubicación (URL)
+
+1,CompuSearch Central,"Av. Principal 123 - San Isidro, Lima",ACTIVO,555-0101,Garantía Oficial 1 año / Envíos Lima,,
+2,CompuSearch Norte,"Plaza Mayor 456 - Los Olivos, Lima",INACTIVO,555-0202,Soporte Local,,
+3,pc Factory Perú,Plaza San Miguel / Jockey Plaza / Comas,ACTIVO,+51 1 7161666,Garantía Retail / Boleta / Factura / Asesoría,,
+4,Grupo Compu & Visión,"Av. Garcilaso de la Vega 1251, Tienda #123 (Compuplaza)",ACTIVO,987 163 458,Importación directa / Venta componentes,,
+5,SB Data,"Av. Garcilaso de la Vega 1236, Tienda 324 (Wilson)",ACTIVO,994 061 341,Armado de PC / Cotización por WhatsApp,,
+6,Infotec Perú,Grupo Infotec - Tienda Virtual y Física Lima,ACTIVO,935 715 405,Distribuidor autorizado Intel y AMD,,
+7,Rayotec,RUC 20608329839 - Grupo Tecnológico M&V S.A.C.,ACTIVO,974 578 820,Acepta MercadoPago / Envíos a provincia,,
+8,Memory Kings,Minorista Mayorista Wilson / Tienda Online,ACTIVO,(01) 619-3000,Garantía extendida en componentes,,
+9,SercoPlus,"Galería CompuPlaza - Wilson, Lima",ACTIVO,(01) 423-1122,Garantía oficial de 1 año en hardware,,
+ID,Nombre de Usuario,Correo Electrónico (Email),Rol de Sistema,Estado de Cuenta,Perfil Avatar (URL)
+
+1,Admin Prueba,admin@compusearch.com,ADMIN,ACTIVO,
+2,Cliente Prueba,cliente@compusearch.com,CLIENTE,ACTIVO,
+3,Soporte Técnico,soporte@compusearch.com,SOPORTE,ACTIVO,
+4,Vendedor Wilson,ventas@compusearch.com,VENDEDOR,ACTIVO,
+ID,Nombre del Empleado,Puesto / Cargo,Sede Asignada,Estado
+
+1,Juan Técnico,Soporte Nivel 2,CompuSearch Central,ACTIVO
+2,María Asesora,Atención al Cliente,pc Factory Perú,ACTIVO
+3,Carlos Armador,Especialista Ensamble PC,SB Data Wilson,ACTIVO
+ID,Título del Incidente,Estado,Fecha Registro,Prioridad
+
+1,Fallo en servidor de base de datos,PENDIENTE,2026-10-01,ALTA
+2,Actualización de catálogo de componentes Wilson,RESUELTO,2026-09-28,MEDIA
+CATEGORÍAS DE PRODUCTOS DE HARDWARE,,,,
+ID,Nombre de Categoría,Código / Ícono,Enlace Ícono / Imagen de Categoría (URL),Vista Previa
+1,Procesadores (CPU),cpu,,
+2,Tarjetas Gráficas (GPU),gpu,,
+3,Memoria RAM,ram,,
+4,Placas Madre (Motherboard),mobo,,
+5,Almacenamiento (SSD / HDD),ssd,,
+6,Gabinetes / Cases,case,,
+7,Sistemas de Enfriamiento,cooler,,
+8,Fuentes de Poder,psu,,
+9,Periféricos & Accesorios,perifericos,,
+
+
+DEFINICIÓN DE ENDPOINTS DE LA API (MSW HANDLERS),,,,
+Método HTTP,Ruta de Endpoint,Descripción del Handler,Respuesta / Estado,Mapeo Base de Datos
+GET,/auth/me,Obtener usuario autenticado actual,200 / 401 Unauthorized,db.usuarios
+POST,/auth/login,Iniciar sesión y obtener mock JWT token,200 OK + token,db.usuarios[0]
+GET,/usuario/:id,Consultar usuario por ID específico,200 OK / 404 Not Found,db.usuarios.find()
+GET,/categorias/todas,Listado completo de categorías con íconos,200 OK,Categorías con ícono
+GET,/categorias,Listado simplificado de categorías,200 OK,Categorías principales
+GET,/tiendas,Listado completo de tiendas,200 OK,db.tiendas
+GET,/tiendas/verificadas,Filtrar tiendas con estado ACTIVO,200 OK,db.tiendas.filter(estado === ACTIVO)
+GET,/filtro/categorias,Obtener filtros por categoría,200 OK,Categorías dinámicas
+GET,/filtro/precios,Obtener rango min/max de precios,"200 OK { min: 0, max: 2000 }",Rango de precios ($)
+GET,/filtro/marcas,Obtener marcas disponibles,"200 OK ['Intel', 'NVIDIA', 'AMD']",Marcas de hardware
+GET,/filtro/tiendas,Obtener tiendas para filtrado,200 OK,db.tiendas
+GET,/productos,Listado de todos los productos y componentes,200 OK,db.productos
+GET,/productos/:id,Obtener detalle de producto por ID,200 OK / 404 Not Found,db.productos.find()
+GET,/empleados,Obtener lista de personal de soporte,200 OK,db.empleados
+GET,/incidentes,Obtener incidentes y tickets de soporte,200 OK,db.incidentes

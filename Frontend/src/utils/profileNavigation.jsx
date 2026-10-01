@@ -9,7 +9,7 @@ export const getProfileNavigation = (isAuthenticated, tipoUsuario) => {
 
     if (tipoUsuario === "TIENDA") {
         return {
-            path: "/modal-selector", 
+            path: "/perfil/tienda", 
             iconClass: "bi-shop",
             text: "Seleccionar Perfil",
         };
