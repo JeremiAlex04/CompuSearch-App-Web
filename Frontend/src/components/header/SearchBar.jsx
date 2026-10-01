@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { useCategorias } from "../../features/navigation/hooks/useCategorias";
 
 const SearchBar = () => {
     const [query, setQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const [totalResults, setTotalResults] = useState(0);
     const [loading, setLoading] = useState(false);
-    // Estado para controlar la visibilidad del dropdown
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+    const { categorias } = useCategorias();
 
     const navigate = useNavigate();
     const searchRef = useRef(null);
@@ -82,8 +85,13 @@ const SearchBar = () => {
     // MANEJADOR DEL SUBMIT (Enter o botón 'Ver más')
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (query.trim() !== "") {
-            navigate(`/componentes?search=${encodeURIComponent(query)}`);
+        if (query.trim() !== "" || selectedCategory !== "") {
+            let url = '/componentes';
+            const params = new URLSearchParams();
+            if (query.trim()) params.append('search', query);
+            if (selectedCategory) params.append('categoria', selectedCategory);
+            
+            navigate(`${url}?${params.toString()}`);
             setQuery("");
             setSuggestions([]);
             setTotalResults(0);
@@ -117,9 +125,22 @@ const SearchBar = () => {
                 role="search"
                 onSubmit={handleSubmit}
             >
-                <div className="input-group">
+                <div className="input-group search-bar-group">
+                    <select 
+                        className="form-select search-category-select ps-3 pe-4 d-none d-md-block" 
+                        style={{borderRight: '1px solid #e2e8f0'}}
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                    >
+                        <option value="">Todas las categorías</option>
+                        {categorias.map(cat => (
+                            <option key={cat.idCategoria || cat.id} value={cat.nombre}>
+                                {cat.nombre}
+                            </option>
+                        ))}
+                    </select>
                     <input
-                        className="form-control"
+                        className="form-control search-input"
                         type="search"
                         placeholder="¿Qué estás buscando?"
                         aria-label="Buscar"
@@ -128,15 +149,15 @@ const SearchBar = () => {
                         onFocus={handleInputFocus}
                         autoComplete="off"
                     />
-                    <button className="btn btn-outline-light" type="submit">
-                        <i className="bi bi-search fs-6 me-0"></i>
+                    <button className="btn search-btn text-white" type="submit">
+                        <i className="bi bi-search me-2"></i>Buscar
                     </button>
                 </div>
             </form>
 
             {isDropdownVisible && query.length > 1 && (
                 <div
-                    className="list-group"
+                    className="list-group search-autocomplete-dropdown"
                     style={{
                         position: 'absolute',
                         top: '100%',
@@ -148,7 +169,7 @@ const SearchBar = () => {
                     }}
                 >
                     {loading && (
-                        <span className="list-group-item list-group-item-action text-muted">
+                        <span className="list-group-item search-autocomplete-item text-muted">
                             Buscando...
                         </span>
                     )}
@@ -159,17 +180,24 @@ const SearchBar = () => {
                                 <Link
                                     key={item.idProductoTienda}
                                     to={`/producto/${encodeURIComponent(item.nombreProducto)}`}
-                                    className="list-group-item list-group-item-action d-flex align-items-center"
+                                    className="list-group-item list-group-item-action search-autocomplete-item d-flex align-items-center"
                                     onClick={handleSuggestionClick}
                                 >
                                     <img
                                         src={item.urlImagen || 'https://via.placeholder.com/50'}
                                         alt={item.nombreProducto}
-                                        style={{ width: '50px', height: '50px', objectFit: 'contain', marginRight: '15px' }}
+                                        style={{ width: '50px', height: '50px', objectFit: 'contain', marginRight: '15px', borderRadius: '6px', border: '1px solid #f1f5f9' }}
                                     />
                                     <div style={{ flex: 1, minWidth: 0 }}>
-                                        <p className="mb-0 text-dark text-truncate">{item.nombreProducto}</p>
-                                        <strong className="text-primary">S/ {item.precio.toFixed(2)}</strong>
+                                        <p className="mb-0 text-dark text-truncate fw-semibold">
+                                            {item.nombreProducto.split(new RegExp(`(${query})`, 'gi')).map((part, i) => 
+                                                part.toLowerCase() === query.toLowerCase() ? <span key={i} className="bg-warning text-dark px-1 rounded">{part}</span> : part
+                                            )}
+                                        </p>
+                                        <div className="d-flex justify-content-between align-items-center mt-1">
+                                            <span className="badge bg-light text-secondary border">{item.categoria || "Componente"}</span>
+                                            <strong className="text-primary">S/ {item.precio?.toFixed(2) || "0.00"}</strong>
+                                        </div>
                                     </div>
                                 </Link>
                             ))}

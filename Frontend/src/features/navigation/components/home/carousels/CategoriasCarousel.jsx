@@ -152,7 +152,7 @@ const CategoriasCarousel = ({ categorias, loading }) => {
                                         <Card className="shadow-sm category-card-border h-100">
                                             <Card.Img
                                                 variant="top"
-                                                src={`/assets/categorias/${cat.nombreImagen}`}
+                                                src={cat.urlImagen || `/assets/categorias/${cat.nombreImagen}`}
                                                 alt={cat.nombre}
                                             />
                                             <Card.Body className="text-center">
