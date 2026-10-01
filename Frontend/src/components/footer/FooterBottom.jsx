@@ -4,7 +4,7 @@ const FooterBottom = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className="bg-dark text-center py-3 mt-0">
+        <div className="footer-bottom text-center">
             <small>© {currentYear} Grupo CompuSearch - Todos los derechos reservados</small>
         </div>
     );

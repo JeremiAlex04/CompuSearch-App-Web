@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function CategoriaCard({ nombre, descripcion, nombreImagen }) {
-    const imagePath = `/assets/categorias/${nombreImagen}`;
+export default function CategoriaCard({ nombre, descripcion, nombreImagen, urlImagen }) {
+    const imagePath = urlImagen || `/assets/categorias/${nombreImagen}`;
 
     return (
         <article className="card h-100 border border-2 border-secondary-subtle rounded-5 shadow-sm overflow-hidden">

@@ -3,12 +3,13 @@ import FooterLogo from "./FooterLogo";
 import FooterSection from "./FooterSection";
 import FooterSocial from "./FooterSocial";
 import FooterBottom from "./FooterBottom";
+import "./Footer.css";
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-white pt-4">
+        <footer className="footer-premium pt-5">
             <div className="container">
-                <div className="row text-center">
+                <div className="row text-center text-md-start">
                     {/* Columna 1: Logo */}
                     <FooterColumn>
                         <FooterLogo />
@@ -62,7 +63,7 @@ const Footer = () => {
 
 // Componente auxiliar para columnas
 const FooterColumn = ({ children }) => (
-    <div className="col-12 col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center text-center">
+    <div className="col-12 col-md-6 col-lg-3 mb-5 d-flex flex-column align-items-center align-items-md-start">
         {children}
     </div>
 );
